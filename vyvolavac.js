@@ -35,11 +35,23 @@ function tahnoutJmeno() {
     }
 
     // Generujeme náhodný index
-
+    let vyherniIndex = Math.floor(Math.random() * jmena.length);
     // Získáme výherní jméno na patřičném indexu
-
+    let vyherniJmeno = jmena[vyherniIndex];
     // Vyřadíme vylosované jméno z osudí
-
+    jmena.splice(vyherniIndex, 1);
     // Výherní jméno si uložíme do pole k ostatním výherním
-    
+    tazenaJmena.unshift(vyherniJmeno);
+
+    let vyherce = document.querySelector('#vyherka');
+    vyherce.textContent = vyherniJmeno;
+
+    let seznam = document.querySelector('#seznam');
+    seznam.textContent = tazenaJmena;
+
+    document.querySelector('#pocet').textContent = (tazenaJmena.length);
+}
+
+function reset() {
+    location.reload();
 }

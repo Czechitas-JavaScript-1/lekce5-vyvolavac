@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
 	<title>Zkoušení u tabule</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 	<div class="obsah">
@@ -17,16 +19,22 @@
 
 		<button class="tlacitko" onclick="tahnoutJmeno()">Vyvolej náhodnou studentku</button>
 
-
-
 		<h2>Předchozí oběti:</h2>
 
 		<div id="seznam">Seznam vyvolaných</div>
+		<h2>Počet vybraných holek: </h2>
+		<div id="pocet">0
+		</div>
+
+		<br>
+		<button class="tlacitko" onclick="reset()"> Resetovat</button>
 
 	</div>
 
 
-	<script src="main.js"></script>
+	<script src="vyvolavac.js"></script>
+
 
 </body>
+
 </html>
